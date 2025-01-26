@@ -1,0 +1,93 @@
+#indexing {
+  color: lightgray;
+}
+
+#info {
+  margin-top: -5em;
+  color: #cdd6f4;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contained {
+  color: #cdd6f4;
+}
+
+.noParam {
+  font-style: italic;
+  color: #a6adc8;
+}
+
+.mClass {
+  color: #b4befe;
+}
+
+.mCol,
+.argCol,
+li::marker,
+#wrapperCol {
+  color: #9399b2;
+}
+
+.mName,
+.argName,
+#wrap {
+  color: #fab387;
+}
+
+.mArrow,
+.mRetName,
+.argValName,
+#wrapName {
+  color: #f38ba8;
+}
+
+.mRet,
+.argValue,
+#wrapPackage {
+  font-style: italic;
+  color: #eba0ac;
+}
+
+li {
+  font-weight: 500;
+}
+
+.mClass,
+.mCol,
+.mRet,
+#wrapName,
+#wrapPackage {
+  font-weight: 500;
+}
+
+.mArrow {
+  font-weight: 400;
+}
+
+.argName,
+.argValName,
+#wrap {
+  font-weight: 600;
+}
+
+.flash {
+  animation: flash 1s forwards;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
