@@ -19,7 +19,7 @@ let indexing = document.getElementById("indexing");
 async function loadJSON() {
     try {
         document.getElementById("indexing").removeAttribute("hidden");
-        const response = await fetch(`/index/${version}.json`); // Adjust the path as necessary
+        const response = await fetch(`../index/${version}.json`); // Adjust the path as necessary
         if (!response.ok) {
             indexing.innerText = "Network response was not ok";
             return;
