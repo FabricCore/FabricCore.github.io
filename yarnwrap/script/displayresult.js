@@ -73,10 +73,16 @@ function showClass(obj) {
                 "",
             )}</span><span class="mRetName">${method.value.split(".").slice(-1)[0]}</span></span>`;
 
-        if (method.value.startsWith("yarnwrap.")) {
+        if (
+            method.value.startsWith("yarnwrap.") ||
+            method.value == "(constructor)"
+        ) {
             h3.getElementsByClassName("mRetGroup")[0].onclick = () => {
                 let params = new URLSearchParams(window.location.search);
-                let newQ = method.value.split(".").slice(1).join(".");
+                let newQ =
+                    method.value == "(constructor)"
+                        ? params.get("q")
+                        : method.value.split(".").slice(1).join(".");
                 params.set("q", newQ);
                 history.pushState(null, "", "?" + params.toString());
                 window.scrollTo({
