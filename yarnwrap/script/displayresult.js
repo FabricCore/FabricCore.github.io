@@ -65,13 +65,22 @@ function showClass(obj) {
         let h3 = document.createElement("h3");
         let ol = document.createElement("ol");
 
-        h3.innerHTML = `<span class="mClass">${obj.name}</span><span class="mCol">::</span><span class="mName">${method.name}</span> <span class="mArrow">↩</span> <span class="mRetGroup"><span class="mRet">${method.value
+        if (method.is_constructor)
+            h3.innerHTML += `<span class="mTypeHint">Public constructor</span>`;
+        else if (method.is_static)
+            h3.innerHTML += `<span class="mTypeHint">Static method</span>`;
+        else 
+            h3.innerHTML += `<span class="mTypeHint">Object method</span>`;
+
+        h3.innerHTML += `<span class="mClass">${obj.name}</span><span class="mCol">::</span><span class="mName">${method.name}</span> <span class="mArrow">↩</span> <span class="mRetGroup"><span class="mRet">${method.value
             .split(".")
             .slice(0, -1)
             .map((s) => `${s}.`)
             .join(
                 "",
             )}</span><span class="mRetName">${method.value.split(".").slice(-1)[0]}</span></span>`;
+
+        if (method.is_constructor) method.value = "(constructor)";
 
         if (
             method.value.startsWith("yarnwrap.") ||

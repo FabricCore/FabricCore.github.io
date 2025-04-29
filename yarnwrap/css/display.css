@@ -19,6 +19,13 @@
   color: #a6adc8;
 }
 
+.mTypeHint {
+  color: #9399b2;
+  font-weight: 500;
+  font-size: medium;
+  display: block;
+}
+
 .mClass {
   color: #b4befe;
 }
