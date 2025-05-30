@@ -1,1 +1,0 @@
-import{_ as r,c as o,o as t,ae as a}from"./chunks/framework.CqV5Rifv.js";const b=JSON.parse('{"title":"JSCore Book","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),s={name:"README.md"};function i(n,e,l,c,d,p){return t(),o("div",null,e[0]||(e[0]=[a("",5)]))}const h=r(s,[["render",i]]);export{b as __pageData,h as default};
